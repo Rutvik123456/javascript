@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            margin : 5%;
+            padding-top: 0.01%;
+            background-color: lightgreen;
+            width: 41vw;
+            height: 75vw;
+        
+            border: solid black ;
+            border-radius: 25px 0px;
+        
+        }
+
+        input{width: 89%;
+        margin: 1%;
+        padding: 2.5%;
+        }
+
+
+        .button{
+            height: 60px;
+            width: 70px;
+            background-color: bisque;
+            margin : 8px;
+
+        }
+
+        .btnbox{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        h1{
+            
+            margin-left: 25%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+       <h1>Calculator</h1>
+        <input type="text" class="inr" placeholder="enter digit here">
+        
+        <div class="btnbox">
+            <button class="button" onclick="
+             
+
+            display = '';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">c</button>
+            <button class="button" onclick="
+             
+
+                display = display +'1';
+                document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">1</button>
+
+            <button class="button" onclick="
+             
+
+            display = display +'2';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">2</button>
+            <button class="button" onclick="
+             
+
+            display = display +'+';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">+</button>
+            <button class="button" onclick="
+             
+
+            display = display +'3';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">3</button>
+            <button class="button" onclick="
+             
+
+            display = display +'4';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">4</button>
+            <button class="button" onclick="
+             
+
+            display = display +'-';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">-</button>
+            <button class="button" onclick="
+             
+
+            display = display +'5';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">5</button>
+            <button class="button" onclick="
+             
+
+            display = display +'6';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">6</button>
+            <button class="button" onclick="
+             
+
+            display = display +'*';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">*</button>
+            <button class="button" onclick="
+             
+
+            display = display +'7';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">7</button>
+            <button class="button" onclick="
+             
+
+            display = display +'8';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">8</button>
+            <button class="button" onclick="
+             
+
+            display = display +'/';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">/</button>
+            <button class="button" onclick="
+             
+
+            display = display +'9';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">9</button>
+            <button class="button" onclick="
+             
+
+            display = display +'0';
+            document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">0</button>
+            <button class="button" onclick="
+             
+
+            display = eval(display);
+                        document.querySelector(`.inr`).value=`${display}`
+
+            
+            
+            ">=</button>        
+        </div>
+    </div>
+
+    <script>
+        let display = '';
+
+        document.querySelector(`.inr`).value = `${display}`
+
+    </script>
+</body>
+</html>
