@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    
+  </head> 
+  <body>
+      <h1>TICKET</h1>
+      <input id="tktinput" type="number" placeholder="ticket price
+      " />
+      <div>
+       <button onclick="
+       gender='Male';
+        age=69;">MaleAbove65</button>
+       <button onclick=" gender='FeMale';
+           age=69;">FeMaleAbove65</button>
+       <button onclick=" gender='';age=4;">kidUnder5</button>
+       <button onclick=" gender='';age=6;">teen</button>
+       <button onclick=" gender='';age=26;">maleadult</button>
+      
+        </div>
+        <button onclick=" 
+          
+          let ticket=parseFloat(document.querySelector('#tktinput').value);
+          
+         if (gender==='Male' && age>65){
+           
+           
+           let finalticket = ticket*0.7;
+           alert('You choose MaleAbove65 : 30% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           
+         }
+         else if (gender==='FeMale' && age>65){
+          
+           let finalticket = ticket*0.5;
+           alert('You choose FeMaleAbove65 : 50% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           }
+         else if (gender==='' && age<5){
+          
+           let finalticket = ticket*0;
+           alert('You choose KidUnder5 : 0% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           }
+         else if (gender==='' && age>5 && age<8){
+           
+           let finalticket = ticket*0.5;
+           alert('You choose KidBetween5To8 : 50% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           }
+         else{
+           
+           let finalticket = ticket*1;
+           alert('You choose M/F Between8to65 : 100% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           }">calculate</button>
+    
+       <script>
+         var gender;
+         var age;
+         /*
+         let buttoncal= Math.random()*5;
+         
+         if(buttoncal<1){
+           gender=`Male`;
+           age=69;
+         }
+         else if(buttoncal>1 && buttoncal<2){
+           gender=`FeMale`;
+           age=69;
+         }
+         else if(buttoncal>2 && buttoncal<3){
+          
+           age=4;
+         }
+         else if(buttoncal>3 && buttoncal<4){
+           
+           age=6;
+         }
+         else{
+          
+           age=69;
+         }
+         */
+         
+        /* if (gender===`Male` && age>65){
+           
+           let ticket=document.querySelector('#tktinput').value;
+           let finalticket = ticket*0.7;
+           alert(`${finalticket}`);
+           console.log(`30% off ticket`);
+         }
+         else if (gender===`FeMale` && age>65){
+           let ticket=document.querySelector('#tktinput').value;
+           let finalticket = ticket*0.5;
+           console.log(`${finalticket}`);
+           console.log(`50% off ticket`);
+         }
+         else if (age<5){
+          let ticket=document.querySelector('#tktinput').value;
+           let finalticket = ticket*0;
+           console.log(`${finalticket}`);
+           console.log(`100% off ticket`);
+         }
+         else if (age>5 && age<8){
+           let ticket=document.querySelector('#tktinput').value;
+           let finalticket = ticket*0;
+           console.log(`${finalticket}`);
+           console.log(`100% off ticket`);
+         }
+         else{
+           let ticket=document.querySelector('#tktinput').value;
+           let finalticket = ticket*1;
+           console.log(`${finalticket}`);
+           console.log(`no discount`);
+         }
+         */
+       </script>
+     
+  </body>
+</html>
