@@ -2,24 +2,55 @@
 <html>
   <head>
     <title>Hello, World!</title>
-    
+    <style>
+      .calculate{
+        margin: 15px 65px;
+        padding: 10px 150px;
+      }
+      .gage{
+        padding: 5px 10px;
+        margin: 20px 2px;
+      }
+
+      #tktinput{
+        margin: 0px 15px;
+        padding: 10px 150px;
+      }
+
+      .mainbox{
+          border: solid black 1px;
+          border-radius: 5px;
+          width: 500px;
+
+          background-color: lightblue;
+      }
+
+      *{
+        margin: 5px;
+        padding: 5px;
+      }
+      h1{
+        margin: 15px 30px;
+      }
+    </style>
   </head> 
   <body>
-      <h1>TICKET</h1>
-      <input id="tktinput" type="number" placeholder="ticket price
-      " />
+    <div class="mainbox">
+      <h1>TICKET__PRICE__SYSTEM</h1>
+      <input id="tktinput" type="number" placeholder=" Enter your ticket price
+       here" />
       <div>
-       <button onclick="
+       <button class="gage" onclick="
        gender='Male';
         age=69;">MaleAbove65</button>
-       <button onclick=" gender='FeMale';
+       <button class="gage" onclick=" gender='FeMale';
            age=69;">FeMaleAbove65</button>
-       <button onclick=" gender='';age=4;">kidUnder5</button>
-       <button onclick=" gender='';age=6;">teen</button>
-       <button onclick=" gender='';age=26;">maleadult</button>
+       <button class="gage" onclick=" gender='';age=4;">kidUnder5</button>
+       <button class="gage" onclick=" gender='';age=6;">teen</button>
+       <button class="gage" onclick=" gender='';age=26;">maleadult</button>
       
         </div>
-        <button onclick=" 
+        <button class="calculate" onclick=" 
           
           let ticket=parseFloat(document.querySelector('#tktinput').value);
           
@@ -38,7 +69,7 @@
          else if (gender==='' && age<5){
           
            let finalticket = ticket*0;
-           alert('You choose KidUnder5 : 0% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           alert('You choose KidUnder5 : 100% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
            }
          else if (gender==='' && age>5 && age<8){
            
@@ -48,9 +79,9 @@
          else{
            
            let finalticket = ticket*1;
-           alert('You choose M/F Between8to65 : 100% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
+           alert('You choose M/F Between8to65 : 0% off ticket\n\n' +'FinalTicket price is Rs'+ finalticket);
            }">calculate</button>
-    
+    </div>
        <script>
          var gender;
          var age;
