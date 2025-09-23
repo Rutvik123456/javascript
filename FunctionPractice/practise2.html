@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice</title>
+   <style>
+    .bt1{
+        border-radius: 20px;
+        background-color: aquamarine
+    }
+    .headcontent{
+        margin: 20px;
+        border: solid green 3px;
+        border-radius: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgoldenrodyellow;
+    }
+    .maincontent{
+        background-color: lightgoldenrodyellow;
+        padding: 25%;
+        margin: 20px;
+        border: solid green 3px;
+        border-radius: 100px;
+        display: flex;
+        
+        
+        justify-content: center;
+        align-items: center;
+    }
+   </style>
+  </head>
+  <body>
+        <div class="headcontent">
+        <h1>Practice_Functions</h1>
+        <h3>Program-For-Find-Sum-And-Large Number</h3>
+       </div>
+       <div class="maincontent">
+            <table border="0">
+                <tr>
+                    <td><input type="number" id="rr" placeholder="1st input"> </input></td>
+                    <td><input type="number" id="rrr" placeholder="2nd input"> </input></td>
+                </tr>
+                <tr><td height="50"></td></tr>
+                <tr><td colspan="2">   <center>                <button onclick="calculate()" class="bt1">Sum</button></center>
+                </td>
+
+                </tr>
+
+                <tr><td height="10"></td></tr>
+
+                <tr><td colspan="2" >
+                    <center><button onclick="large()"   class="bt1">Large Num</button></center></td>
+                </tr>
+            </table>
+        </div>
+            
+
+       
+       <script>
+         
+         
+               
+                 
+            function calculate () {
+            
+                    let val1=Number(document.querySelector('#rr').value);
+                    console.log(`${val1}`);
+
+                    let val2=Number(document.querySelector('#rrr').value);
+                    console.log(`${val2}`);
+                
+                
+                    let cal = val1 + val2;
+                    alert(`${cal}`);}
+
+
+            function large (){
+                    
+                    let a=Number(document.querySelector('#rr').value);
+                  
+
+                    let b=Number(document.querySelector('#rrr').value);
+                    
+                
+
+                    return alert(a>b ? a : b)};
+         
+
+            
+
+       </script>
+     
+  </body>
+</html>
