@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+  <style>
+    .odd{
+      color: black;
+      background-color: lightcoral
+    }
+
+    .even{
+      color: black;
+      background-color: lightseagreen;
+    }
+
+    button{
+      margin: 20px;
+      width: 200px;
+      height: 80px;
+      font-size: 2em;
+      border: solid 0px;
+      border-radius: 0px 40px;
+    }
+
+  
+
+    
+  </style>
+</head>
+<body>
+  
+  
+    <h1 class="greet"></h1>
+  
+    <button class="even" onclick="Touch()" >Button</button>
+  
+  <script>
+  
+    //for button :
+    let user_click=   localStorage.getItem('clicks') || 0;
+    let buttondom = document.querySelector('button')
+    
+   
+   
+    function Touch (){
+      user_click++;
+      document.querySelector('button').innerText=user_click;
+
+      css();
+       
+    
+        localStorage.setItem('clicks', user_click)
+      
+    }
+
+    function css(){
+   
+      if(user_click %2===0 ){
+        buttondom.classList.remove('even');
+        buttondom.classList.add('odd');
+      }
+      else {
+        buttondom.classList.remove('odd');
+        buttondom.classList.add('even');
+      }
+    }
+
+    //for greeting
+
+    let time = new Date()
+    let slot= time.getHours();
+    let greetText = document.querySelector('h1');
+
+    greeting('User')
+
+    function greeting (NameUser){
+    if(slot >= 0 && slot< 12){
+      greetText.innerText= `Good Morning + ${NameUser}`;
+    }
+    else if (slot >= 12 && slot< 19){
+      greetText.innerText=`Good Afternoon + + ${NameUser}`    }
+    else{
+      greetText.innerText=`Good Night ${NameUser}`    };
+  }
+  
+
+  </script>
+</body>
+</html>
